@@ -1,0 +1,91 @@
+@import "./config";
+
+$font-family-base: $font-stack;
+$primary: $clr-primary;
+$secondary: #e2e6ea;
+$dark: $clr-black;
+
+.navbar {
+  min-height: 70px;
+
+  -webkit-box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.1);
+
+  &-brand {
+    font-size: 2.3rem !important;
+    line-height: 1 !important;
+
+    span {
+      color: $clr-primary;
+    }
+  }
+}
+
+.tasks {
+  min-height: calc(100vh - 70px);
+  margin-top: 70px;
+}
+
+.empty-state {
+  min-height: calc(100vh - 70px);
+  margin-top: 70px;
+
+  img {
+    width: 100%;
+    max-width: 325px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-left: 10%;
+  }
+
+  button {
+    padding: 0.7rem 1.95rem !important;
+  }
+
+  @media (max-width: 580px) {
+    img {
+      max-width: 60%;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      max-width: 200px;
+      margin: 0 auto 1rem;
+    }
+  }
+}
+
+/* Modal */
+.modal-backdrop.show {
+  opacity: 0.2 !important;
+}
+
+.modal-content {
+  border: none !important;
+  border-radius: 8px !important;
+
+  -webkit-box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.1);
+}
+
+/* Masonry */
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -24px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 24px; /* gutter size */
+  background-clip: padding-box;
+}
+
+@import "./utilities";
+@import "~bootstrap/scss/bootstrap.scss";
